@@ -187,6 +187,12 @@
             animation: glow 2s ease-in-out infinite;
         }
         
+        .badge-icon {
+            width: 16px;
+            height: 16px;
+            color: var(--accent);
+        }
+        
         @keyframes glow {
             0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
             50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
@@ -368,6 +374,14 @@
             font-size: 1.2rem;
         }
         
+        .float-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            stroke-width: 2;
+            fill: none;
+        }
+        
         .float-card.icon-1 .float-icon { background: rgba(99, 102, 241, 0.3); }
         .float-card.icon-2 .float-icon { background: rgba(236, 72, 153, 0.3); }
         .float-card.icon-3 .float-icon { background: rgba(6, 182, 212, 0.3); }
@@ -468,9 +482,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
         }
         
         .service-card h3 {
@@ -493,9 +514,12 @@
         }
         
         .service-list li::before {
-            content: '✓';
-            color: var(--accent);
-            font-weight: 700;
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306B6D4' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
         }
         
         /* Work Process */
@@ -539,6 +563,8 @@
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
             margin: 0 auto 1.5rem;
             position: relative;
             z-index: 1;
@@ -640,8 +666,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
             margin: 0 auto 1.5rem;
+        }
+        
+        .feature-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
         }
         
         .feature-box h3 {
@@ -736,7 +769,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+        }
+        
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            stroke-width: 2;
+            fill: none;
         }
         
         .contact-details {
@@ -823,6 +863,16 @@
             justify-content: center;
             margin-bottom: 1rem;
             font-size: 1.5rem;
+        }
+        
+        .heart-icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            clip-path: path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z');
+            vertical-align: middle;
+            margin: 0 4px;
         }
         
         /* Print Styles */
@@ -948,7 +998,12 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="badge">⚡ Available for New Clients</div>
+                <div class="badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    Available for New Clients
+                </div>
                 <h1>We Handle Your <span>Social Media</span> So You Can Handle Business</h1>
                 <p>Full-service social media management. Daily content, professional design, active campaigns, and real growth. Plus stunning websites that convert.</p>
                 <div class="cta-group">
@@ -992,7 +1047,13 @@
                 </div>
                 
                 <div class="float-card icon-1">
-                    <div class="float-icon">📈</div>
+                    <div class="float-icon">
+                        <svg viewBox="0 0 24 24">
+                            <line x1="12" y1="20" x2="12" y2="10"></line>
+                            <line x1="18" y1="20" x2="18" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="16"></line>
+                        </svg>
+                    </div>
                     <div>
                         <div class="float-text">+250%</div>
                         <div class="float-sub">Engagement</div>
@@ -1000,7 +1061,13 @@
                 </div>
                 
                 <div class="float-card icon-2">
-                    <div class="float-icon">🎯</div>
+                    <div class="float-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
                     <div>
                         <div class="float-text">Daily</div>
                         <div class="float-sub">Content</div>
@@ -1008,7 +1075,11 @@
                 </div>
                 
                 <div class="float-card icon-3">
-                    <div class="float-icon">🚀</div>
+                    <div class="float-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
                     <div>
                         <div class="float-text">Active</div>
                         <div class="float-sub">Campaigns</div>
@@ -1028,7 +1099,12 @@
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-header">
-                    <div class="service-icon">📱</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
                     <h3>Social Media Management</h3>
                 </div>
                 <ul class="service-list">
@@ -1042,7 +1118,15 @@
             
             <div class="service-card">
                 <div class="service-header">
-                    <div class="service-icon">🎨</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                        </svg>
+                    </div>
                     <h3>Content Design</h3>
                 </div>
                 <ul class="service-list">
@@ -1056,7 +1140,13 @@
             
             <div class="service-card">
                 <div class="service-header">
-                    <div class="service-icon">🎯</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
                     <h3>Ad Campaigns</h3>
                 </div>
                 <ul class="service-list">
@@ -1070,7 +1160,12 @@
             
             <div class="service-card">
                 <div class="service-header">
-                    <div class="service-icon">💰</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
                     <h3>Lead Generation</h3>
                 </div>
                 <ul class="service-list">
@@ -1084,7 +1179,13 @@
             
             <div class="service-card">
                 <div class="service-header">
-                    <div class="service-icon">🌐</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
                     <h3>Web Design</h3>
                 </div>
                 <ul class="service-list">
@@ -1098,7 +1199,13 @@
             
             <div class="service-card">
                 <div class="service-header">
-                    <div class="service-icon">📊</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
                     <h3>Analytics & Growth</h3>
                 </div>
                 <ul class="service-list">
@@ -1172,37 +1279,71 @@
         
         <div class="features-grid">
             <div class="feature-box">
-                <div class="feature-icon">⚡</div>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                </div>
                 <h3>Fast Turnaround</h3>
                 <p>Same-day content creation and rapid campaign deployment. We move as fast as social media does.</p>
             </div>
             
             <div class="feature-box">
-                <div class="feature-icon">🎨</div>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                        <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                        <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                    </svg>
+                </div>
                 <h3>Unique Designs</h3>
                 <p>No templates. Every graphic is custom-made for your brand to stand out in crowded feeds.</p>
             </div>
             
             <div class="feature-box">
-                <div class="feature-icon">📈</div>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="16"></line>
+                    </svg>
+                </div>
                 <h3>Growth Focused</h3>
                 <p>We don't just post—we strategize. Every action is designed to bring you new customers.</p>
             </div>
             
             <div class="feature-box">
-                <div class="feature-icon">💬</div>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9H11a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                </div>
                 <h3>Real Engagement</h3>
                 <p>We actively respond to comments and DMs, turning followers into loyal customers.</p>
             </div>
             
             <div class="feature-box">
-                <div class="feature-icon">🔍</div>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
                 <h3>Full Transparency</h3>
                 <p>Weekly reports showing exactly what we did and the results we achieved. No guesswork.</p>
             </div>
             
             <div class="feature-box">
-                <div class="feature-icon">🤝</div>
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
                 <h3>Partnership Approach</h3>
                 <p>We treat your business like our own. Your success is literally our success.</p>
             </div>
@@ -1223,7 +1364,12 @@
                 
                 <div class="contact-methods">
                     <a href="mailto:demowebsite@gmail.com" class="contact-item">
-                        <div class="contact-icon">✉️</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
                         <div class="contact-details">
                             <div class="contact-label">Email Us</div>
                             <div class="contact-value">demowebsite@gmail.com</div>
@@ -1231,7 +1377,13 @@
                     </a>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">🌍</div>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
                         <div class="contact-details">
                             <div class="contact-label">Location</div>
                             <div class="contact-value">Remote / Worldwide</div>
@@ -1262,7 +1414,9 @@
         <div class="logo">Socio Flux</div>
         <p>Social Media Management & Web Design Agency</p>
         <p style="margin-top: 0.5rem;">© 2026 Socio Flux. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748B;">Built with 💜 for growing brands</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748B;">
+            Built with <span class="heart-icon"></span> for growing brands
+        </p>
     </footer>
     
     <script>
